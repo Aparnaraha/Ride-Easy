@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideEasy - Premium Cab Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <nav class="nav">
+            <div class="nav-brand" onclick="scrollToTop()">
+                RideEasy
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+                <li><a href="#why" class="nav-link" data-section="why">Why</a></li>
+                <li><a href="#how" class="nav-link" data-section="how">How</a></li>
+                <li><a href="#fleet" class="nav-link" data-section="fleet">Fleet</a></li>
+                <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+                <li><a href="#faqs" class="nav-link" data-section="faqs">FAQs</a></li>
+                <li><a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            
+            <button class="btn-primary" onclick="openBookingModal()">
+                Book Now
+            </button>
+            
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Your Journey, <span class="gradient-text">Our Priority</span>
+                    </h1>
+                    <p class="hero-description">
+                        Experience premium cab services with professional drivers, modern fleet, and 24/7 availability. 
+                        Safe, comfortable, and reliable rides await you.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn-primary btn-large" onclick="openBookingModal()">
+                            Book Your Ride
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn-outline btn-large">
+                            Learn More
+                        </button>
+                    </div>
+                    
+                    <div class="hero-features">
+                        <div class="feature-card">
+                            <i class="fas fa-clock"></i>
+                            <span>24/7 Service</span>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Safe & Secure</span>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-bolt"></i>
+                            <span>Quick Booking</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="image-glow"></div>
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
+                         alt="Premium cab service" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose Us?</h2>
+                    <p class="section-description">
+                        We're committed to providing exceptional service with modern technology and professional care
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 class="feature-title">Modern Fleet</h3>
+                        <p class="feature-desc">Well-maintained vehicles with latest safety features and comfort amenities</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="feature-title">Always On Time</h3>
+                        <p class="feature-desc">Punctual service with real-time tracking and professional drivers</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3 class="feature-title">Smart Routes</h3>
+                        <p class="feature-desc">AI-powered route optimization for faster and safer journeys</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="feature-title">100% Satisfaction</h3>
+                        <p class="feature-desc">Dedicated customer support and quality assurance for every ride</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-description">
+                        Choose from our range of premium transportation services tailored to your needs
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card" data-service="One-Way">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" 
+                                 alt="One-Way Service">
+                            <div class="service-overlay"></div>
+                            <div class="service-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">One-Way</h3>
+                            <p class="service-desc">Reliable one-way rides to your destination.</p>
+                            <button class="btn-primary service-btn" onclick="selectService('One-Way')">
+                                Book One-Way
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="Round-Trip">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Round-Trip Service">
+                            <div class="service-overlay"></div>
+                            <div class="service-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Round-Trip</h3>
+                            <p class="service-desc">Comfortable round trips with flexible timings.</p>
+                            <button class="btn-primary service-btn" onclick="selectService('Round-Trip')">
+                                Book Round-Trip
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="Airport Pickup">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Airport Pickup Service">
+                            <div class="service-overlay"></div>
+                            <div class="service-icon">
+                                <i class="fas fa-plane"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Airport Pickup</h3>
+                            <p class="service-desc">Timely and safe airport pickups and drop-offs.</p>
+                            <button class="btn-primary service-btn" onclick="selectService('Airport Pickup')">
+                                Book Airport Pickup
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="Spare Driver">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1685984351037-f5c0926a716e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNlbGYlMjBkcml2aW5nJTIwY2FyfGVufDB8fDB8fHww" 
+                                 alt="Spare Driver Service">
+                            <div class="service-overlay"></div>
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Spare Driver</h3>
+                            <p class="service-desc">Professional spare drivers for your convenience.</p>
+                            <button class="btn-primary service-btn" onclick="selectService('Spare Driver')">
+                                Book Spare Driver
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card" data-service="Self Drive">
+                        <div class="service-image">
+                            <img src="https://images.unsplash.com/photo-1581091871235-868c13b39a42?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Self Drive Service">
+                            <div class="service-overlay"></div>
+                            <div class="service-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Self Drive</h3>
+                            <p class="service-desc">Rent a cab and drive yourself with ease.</p>
+                            <button class="btn-primary service-btn" onclick="selectService('Self Drive')">
+                                Book Self Drive
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fleet -->
+        <section id="fleet" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Premium Fleet</h2>
+                    <p class="section-description">
+                        Choose from our diverse range of well-maintained vehicles for every occasion
+                    </p>
+                </div>
+                
+                <div class="fleet-grid">
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Sedan">
+                            <div class="fleet-overlay"></div>
+                        </div>
+                        <div class="fleet-content">
+                            <div class="fleet-header">
+                                <h3 class="fleet-title">Sedan</h3>
+                                <span class="fleet-capacity">4 Passengers</span>
+                            </div>
+                            <div class="fleet-features">
+                                <span class="feature-tag">AC</span>
+                                <span class="feature-tag">GPS</span>
+                                <span class="feature-tag">Music System</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" 
+                                 alt="SUV">
+                            <div class="fleet-overlay"></div>
+                        </div>
+                        <div class="fleet-content">
+                            <div class="fleet-header">
+                                <h3 class="fleet-title">SUV</h3>
+                                <span class="fleet-capacity">7 Passengers</span>
+                            </div>
+                            <div class="fleet-features">
+                                <span class="feature-tag">AC</span>
+                                <span class="feature-tag">GPS</span>
+                                <span class="feature-tag">Premium Interior</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fleet-card">
+                        <div class="fleet-image">
+                            <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=600&q=80" 
+                                 alt="Luxury">
+                            <div class="fleet-overlay"></div>
+                        </div>
+                        <div class="fleet-content">
+                            <div class="fleet-header">
+                                <h3 class="fleet-title">Luxury</h3>
+                                <span class="fleet-capacity">4 Passengers</span>
+                            </div>
+                            <div class="fleet-features">
+                                <span class="feature-tag">Premium AC</span>
+                                <span class="feature-tag">GPS</span>
+                                <span class="feature-tag">Leather Seats</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-description">
+                        Simple steps to book your perfect ride in minutes
+                    </p>
+                </div>
+                
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Choose Service</h3>
+                        <p class="step-desc">Select the perfect cab service for your travel needs from our range of options</p>
+                        <div class="step-connector"></div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Book Your Ride</h3>
+                        <p class="step-desc">Fill out our simple booking form with your details and preferred schedule</p>
+                        <div class="step-connector"></div>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Enjoy Your Trip</h3>
+                        <p class="step-desc">Relax and enjoy a safe, comfortable journey with our professional drivers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our Customers Say</h2>
+                </div>
+                
+                <div class="testimonial-container">
+                    <div class="testimonial-card active" data-index="0">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Aparna Raha" class="testimonial-avatar">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "The cab arrived on time and the driver was very professional. Highly recommend!"
+                        </blockquote>
+                        <p class="testimonial-author">— Aparna Raha</p>
+                    </div>
+                    
+                    <div class="testimonial-card" data-index="1">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sneha Verma" class="testimonial-avatar">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Great experience with the spare driver service. Smooth and safe rides."
+                        </blockquote>
+                        <p class="testimonial-author">— Sneha Verma</p>
+                    </div>
+                    
+                    <div class="testimonial-card" data-index="2">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Ankit Singh" class="testimonial-avatar">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-text">
+                            "Easy booking process and friendly support. Will book again!"
+                        </blockquote>
+                        <p class="testimonial-author">— Ankit Singh</p>
+                    </div>
+                    
+                    <div class="testimonial-dots">
+                        <button class="dot active" onclick="showTestimonial(0)"></button>
+                        <button class="dot" onclick="showTestimonial(1)"></button>
+                        <button class="dot" onclick="showTestimonial(2)"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs -->
+        <section id="faqs" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-description">Find answers to common questions about our services</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(0)">
+                            <span>How do I book a cab?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Select a service and fill out the booking form. Confirm your booking to finalize.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(1)">
+                            <span>Can I cancel my booking?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, cancellations are allowed up to 24 hours before the pickup.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(2)">
+                            <span>Do you provide outstation services?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, we offer reliable and affordable outstation rides to multiple destinations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(3)">
+                            <span>What payment methods are accepted?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We accept cash, credit/debit cards, and popular mobile wallets for your convenience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-description">Have questions? We're here to help you 24/7</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message" required rows="4" placeholder="Write your message here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+91 97555 36829</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>info@rideeasy.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Address</h3>
+                                <p>123 Main Street, City, Country</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeBookingModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h2 class="modal-title">Book Your Ride</h2>
+            
+            <div class="service-selection">
+                <button class="service-btn" data-service="One-Way" onclick="selectModalService('One-Way')">One-Way</button>
+                <button class="service-btn" data-service="Round-Trip" onclick="selectModalService('Round-Trip')">Round-Trip</button>
+                <button class="service-btn" data-service="Airport Pickup" onclick="selectModalService('Airport Pickup')">Airport Pickup</button>
+                <button class="service-btn" data-service="Spare Driver" onclick="selectModalService('Spare Driver')">Spare Driver</button>
+                <button class="service-btn" data-service="Self Drive" onclick="selectModalService('Self Drive')">Self Drive</button>
+            </div>
+            
+            <form class="booking-form" onsubmit="handleBookingSubmit(event)">
+                <div class="form-group">
+                    <input type="text" name="name" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="mobile" required placeholder="Mobile Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="pickup" required placeholder="Pickup Location">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="drop" required placeholder="Drop Location">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="time" name="time" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="footer-title">RideEasy</h3>
+                    <p class="footer-desc">Your trusted partner for safe, comfortable, and reliable transportation services.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#why">Why</a></li>
+                        <li><a href="#how">How</a></li>
+                        <li><a href="#fleet">Fleet</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#faqs">FAQs</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li>One-Way</li>
+                        <li>Round-Trip</li>
+                        <li>Airport Pickup</li>
+                        <li>Spare Driver</li>
+                        <li>Self Drive</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact">
+                        <p>Phone: +91 97555 36829</p>
+                        <p>Email: info@rideeasy.com</p>
+                        <p>Address: 123 Main Street, City, Country</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 RideEasy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
